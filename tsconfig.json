@@ -1,0 +1,21 @@
+{
+	"extends": "astro/tsconfigs/strict",
+	"compilerOptions": {
+		"jsx": "react-jsx",
+		"jsxImportSource": "react",
+		"baseUrl": "./src",
+		"paths": {
+			"@layouts/*": ["layouts/*"],
+			"@t/*": ["types/*"],
+			"@ui/*": ["components/ui/*"],
+			"@screenshots/*": ["components/screenshots/*"],
+			"@reviews/*": ["components/reviews/*"],
+			"@features/*": ["components/features/*"],
+			"@faq/*": ["components/faq/*"],
+			"@hero/*": ["components/hero/*"],
+			"@footer/*": ["components/footer/*"],
+			"@social/*": ["components/social/*"],
+			"@utils/*": ["utils/*"]
+		}
+	}
+}
