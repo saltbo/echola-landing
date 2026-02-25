@@ -1,38 +1,34 @@
 import type { Feature } from "@t/content";
 
-/**
- * App features configuration
- *
- * Showcase your app's key capabilities and benefits.
- * Each feature should have:
- * - title: Short, catchy name (2-4 words)
- * - description: Brief explanation of the feature (1-2 sentences)
- * - icon: Icon name from react-icons (FiStar, FiZap, FiBox, etc.)
- *
- * Available icon sets:
- * - Feather Icons (Fi): FiStar, FiZap, FiBox, FiHeart, FiTrendingUp
- * - More at: https://react-icons.github.io/react-icons/icons/fi/
- *
- * Tips for great features:
- * - Focus on user benefits, not technical specs
- * - Use action-oriented language
- * - Choose icons that visually represent each feature
- */
 export const features: Feature[] = [
 	{
-		title: "Main Feature",
-		description: "Describe your main feature here. What makes it special?",
-		icon: "FiStar",
+		title: "Shadowing Practice",
+		description: "Listen to native speakers sentence by sentence, then repeat aloud to build natural pronunciation and fluency.",
+		icon: "FiHeadphones",
 	},
 	{
-		title: "Another Feature",
-		description: "What else can your app do? Tell users about it here.",
+		title: "AI Pronunciation Feedback",
+		description: "Get instant AI-powered analysis of your speech with suggestions to improve your accent and phrasing.",
 		icon: "FiZap",
 	},
 	{
-		title: "One More Feature",
-		description: "Add another key feature of your application here.",
-		icon: "FiBox",
+		title: "Built-in Dictionary",
+		description: "Tap any word to see definitions, translations, example sentences, and track your mastery across 5 levels.",
+		icon: "FiBook",
 	},
-	// Add more features here...
+	{
+		title: "Progress Tracking",
+		description: "Stay motivated with streak tracking, study calendar, weekly trends, and detailed learning statistics.",
+		icon: "FiBarChart2",
+	},
+	{
+		title: "Multi-Platform",
+		description: "Seamless experience across iPhone, iPad, and Mac with iCloud sync to keep your progress everywhere.",
+		icon: "FiMonitor",
+	},
+	{
+		title: "Course Library",
+		description: "Browse curated courses with structured chapters designed to progressively improve your language skills.",
+		icon: "FiStar",
+	},
 ];

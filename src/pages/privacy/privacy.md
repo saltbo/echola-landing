@@ -1,67 +1,55 @@
 # Privacy Policy
 
-**Last updated:** February 1, 2025
+**Last updated:** February 25, 2026
 
-We value your privacy and are committed to protecting your personal information. This policy explains how we collect, use, and safeguard your data.
+Echola ("we", "our", or "the app") values your privacy. This policy explains how we collect, use, and protect your data.
 
 ## Data Collection
 
 We collect the following types of information:
 
-- **Anonymous usage metrics** to understand how you interact with our app
-- **App performance data** to identify and fix technical issues
+- **Learning progress data** including study streaks, completed chapters, and vocabulary mastery levels
+- **Audio recordings** when you use the shadowing practice feature (processed locally or sent to your configured AI engine)
+- **Anonymous usage metrics** to understand how you interact with the app
 - **Device information** including OS version and device model
-- **Error reports** to improve app stability and reliability
+- **iCloud sync data** stored in your private CloudKit database
 
 ## Data Usage
 
-We use the collected data exclusively to:
+We use the collected data to:
 
-- **Improve app performance** by identifying bottlenecks and optimizing features
-- **Fix technical issues** quickly and efficiently
-- **Enhance features** based on user behavior and feedback
-- **Optimize your experience** with personalized recommendations
+- **Sync your progress** across your Apple devices via iCloud
+- **Provide AI feedback** on your pronunciation (sent to your configured AI engine)
+- **Improve app performance** by identifying and fixing issues
+- **Enhance features** based on usage patterns
 
-## Security Measures
+## Data Storage
 
-Your data is protected with industry-standard security:
+- **Local data** is stored on your device using SwiftData
+- **Cloud data** is stored in Apple's iCloud (CloudKit private database) — only you can access it
+- **AI analysis** is processed by the AI engine you configure (OpenAI, Azure, Ollama, or custom) — please review their respective privacy policies
+- **We do not maintain centralized servers** storing your personal learning data
 
-- **Encryption protocols** for data transmission and storage
-- **Regular security audits** to identify and address vulnerabilities
-- **Secure storage systems** with access controls and monitoring
-- **Data anonymization** to protect your identity
+## Data Sharing
 
-## Data Sharing Policy
+We **do not sell your data** to third parties. Data is shared only:
 
-We respect your privacy and **do not sell your data** to third parties. We may share data only in these limited circumstances:
-
-- With **essential service providers** who help us operate the app
-- When **legally required** by court order or regulatory authorities
-- When **you explicitly request it** for data portability
+- With **Apple iCloud** for cross-device sync (governed by Apple's privacy policy)
+- With **your configured AI engine** for pronunciation analysis
+- With **Vocnet services** if you use the dictionary and vocabulary features
+- When **legally required** by applicable law
 
 ## User Rights
 
 You have full control over your data:
 
-- **View your data** at any time through your account settings
-- **Delete your data** permanently from our systems
-- **Stop analytics** by opting out in app preferences
-- **Download your data** in a portable format
-- **Update your information** to keep it accurate
-
-## Policy Updates
-
-We may update this policy from time to time. When we make significant changes:
-
-- You will receive **in-app notifications**
-- We will send **email updates** to your registered address
-- The **effective date** at the top will be updated
-- You can review the full history of changes in our changelog
+- **Delete your data** by removing the app or signing out of iCloud
+- **Disable AI analysis** by not configuring an AI engine
+- **Control sync** through your iCloud settings
+- **Export your data** through your account settings
 
 ## Contact
 
 If you have questions about this privacy policy:
 
-- **Email:** privacy@example.com
-- **Support:** help.example.com
-- **Response time:** Within 48 hours
+- **Website:** [echola.apps.tftt.cc](https://echola.apps.tftt.cc)
