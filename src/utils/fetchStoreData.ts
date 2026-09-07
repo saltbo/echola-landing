@@ -35,14 +35,14 @@ function formatReleaseDate(dateString?: string): string | undefined {
         : undefined;
 }
 
-export async function fetchStoreData(): Promise<Partial<StoreData>> {
-    if (!storeDataConfig.fetchRealData) return {};
+export async function fetchStoreData(config: { fetchRealData: boolean; appStoreAppId: number } = storeDataConfig): Promise<Partial<StoreData>> {
+    if (!config.fetchRealData) return {};
 
     try {
-        const data = await getAppleApp(storeDataConfig.appStoreAppId);
+        const data = await getAppleApp(config.appStoreAppId);
 
         if (!data) {
-            console.error("No app data found for ID:", storeDataConfig.appStoreAppId);
+            console.error("No app data found for ID:", config.appStoreAppId);
             return {};
         }
 

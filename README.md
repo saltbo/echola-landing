@@ -1,3 +1,26 @@
+## Multi-app configuration
+
+The original detail template is shared by `/echola/` and `/zigloo/`. The root
+shows a product directory generated from the same app configs. Echola keeps its original data,
+screenshots, reviews, styling and section order. No replacement design is used.
+
+Add `src/apps/<slug>.ts` exporting an `AppDefinition` (copy `zigloo.ts`). The
+filename must match the slug. Routes, documents and the sitemap are discovered
+automatically; put any new artwork in `public/assets/<slug>/`. Configure screenshots
+for both supported device types, features, reviews, FAQs, store links and documents.
+An empty store URL means that platform is not available yet. Echola's existing
+placeholder assets and content are deliberately preserved pending a separate
+content update. Zigloo has no public download, screenshots or reviews configured;
+its legal/support documents are drafts and excluded from indexing.
+Optional `sections` flags hide unavailable screenshots or reviews without changing
+the template. Echola retains both sections. `title` and `pageDescription` may
+customize each product’s search metadata.
+
+Run `npm run check:multiapp` for the build, route checks and original-template
+regression checks. The canonical domain is `apps.tftt.cc`. Cloudflare Pages project
+`echola-landing` builds `main` with `npm run build` and serves `dist/`.
+Run the checks before pushing to `main`, which triggers production deployment. The original template documentation follows below.
+
 <div align="center">
   <img src="public/assets/favicon.png" alt="Mobile Landing" width="120" height="120" style="border-radius: 24px;">
 

@@ -9,11 +9,15 @@ import { appData } from "../../data";
 const Footer = ({
 	name,
 	logo,
-	description
+	description,
+ homeHref = "/",
+ socialLinks = appData.socialLinks
 }: {
 	name: string;
 	logo: string;
 	description: string;
+ homeHref?: string;
+ socialLinks?: typeof appData.socialLinks;
 }) => {
 	const currentYear = new Date().getFullYear();
 	const startYear = 2025;
@@ -35,7 +39,7 @@ const Footer = ({
 				{/* Mobile Layout */}
 				<div className="flex flex-col gap-6 md:hidden">
 					<div className="flex items-center justify-between">
-						<FooterLogo name={name} logo={logo} />
+						<FooterLogo homeHref={homeHref} name={name} logo={logo} />
 						<ThemeToggle />
 					</div>
 
@@ -43,9 +47,9 @@ const Footer = ({
 
 					<div className="flex items-center justify-between">
 						<div className="flex gap-3">
-							<SocialLinks items={appData.socialLinks} />
+							<SocialLinks items={socialLinks} />
 						</div>
-						<FooterLegal />
+						<FooterLegal homeHref={homeHref} />
 					</div>
 
 					<div className="text-center">
@@ -57,7 +61,7 @@ const Footer = ({
 				<div className="hidden md:flex flex-col gap-4">
 					<div className="flex items-start justify-between">
 						<div className="flex flex-col gap-3 max-w-3xl">
-							<FooterLogo name={name} logo={logo} />
+							<FooterLogo homeHref={homeHref} name={name} logo={logo} />
 							<p className="text-lg text-body leading-relaxed">{description}</p>
 						</div>
 						<ThemeToggle />
@@ -66,11 +70,11 @@ const Footer = ({
 					<div className="flex items-center justify-between pt-6 border-t border-gray-200/30 dark:border-gray-700/30">
 						<div className="flex items-center gap-6">
 							<div className="flex gap-3">
-								<SocialLinks items={appData.socialLinks} />
+								<SocialLinks items={socialLinks} />
 							</div>
 							<div className="text-base text-body">{copyrightText}</div>
 						</div>
-						<FooterLegal />
+						<FooterLegal homeHref={homeHref} />
 					</div>
 				</div>
 			</div>

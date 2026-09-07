@@ -9,17 +9,18 @@ import AnimatedSidebar from "@ui/shared/AnimatedSidebar";
 import { parseMarkdown } from "@utils/parseMarkdown";
 
 interface Props {
+	homeHref?: string;
 	breadcrumbLabel: string;
 	content: string;
 }
 
-const { breadcrumbLabel, content } = Astro.props;
+const { breadcrumbLabel, content, homeHref = "/" } = Astro.props;
 const htmlContent = await parseMarkdown(content);
 ---
 
 <main class="pt-8 md:pt-12 px-4 md:px-6">
 	<div class="max-w-[1500px] mx-auto">
-		<Breadcrumbs items={[{ label: breadcrumbLabel }]} client:load />
+		<Breadcrumbs homeHref={homeHref} items={[{ label: breadcrumbLabel }]} client:load />
 		<div class="flex gap-16">
 			<AnimatedContent client:load>
 				<article>

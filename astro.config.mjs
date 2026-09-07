@@ -3,7 +3,7 @@ import tailwind from "@astrojs/tailwind";
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  site: "https://landing.bohd4n.dev",
+  site: "https://apps.tftt.cc",
   integrations: [tailwind(), react()],
   output: "static", // optional
   vite: {

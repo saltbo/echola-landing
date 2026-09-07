@@ -5,8 +5,8 @@ export interface AppHero {
 	description: string;
 	logo: string;
 	storeLinks: { apple: string; google: string };
-	rating: { score: number; count: string };
-	ageRating: string;
+	rating?: { score: number; count: string };
+	ageRating?: string;
 	version?: string;
 	minimumOS?: string;
 	releaseDate?: string;
@@ -23,8 +23,8 @@ export interface AppInfoProps {
 	title: string;
 	description: string;
 	logo: string;
-	rating: { score: number; count: string };
-	ageRating: string;
+	rating?: { score: number; count: string };
+	ageRating?: string;
 	version?: string;
 	minimumOS?: string;
 	releaseDate?: string;

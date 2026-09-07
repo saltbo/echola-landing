@@ -1,10 +1,11 @@
 import { memo } from "react";
 
-const NavbarLogo = ({ logo, title }: {
+const NavbarLogo = ({ logo, title, homeHref = "/" }: {
+    homeHref?: string;
     logo: string;
     title: string;
 }) => (
-    <a href="/" className="flex items-center gap-3 md:gap-4 justify-start group">
+    <a href={homeHref} className="flex items-center gap-3 md:gap-4 justify-start group">
         <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-br from-gray-200/50 to-gray-300/50 dark:from-white/5 dark:to-white/10 rounded-xl blur-sm group-hover:blur-md transition-all" />
             <img

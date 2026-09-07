@@ -5,7 +5,7 @@ import NavbarStoreLinks from "@ui/navigation/NavbarStoreLinks";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const FloatingNavbar = ({ logo, title, storeLinks, socialLinks }: FloatingNavbarProps) => {
+const FloatingNavbar = ({ logo, title, storeLinks, socialLinks, homeHref = "/" }: FloatingNavbarProps) => {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -27,7 +27,7 @@ const FloatingNavbar = ({ logo, title, storeLinks, socialLinks }: FloatingNavbar
                     >
                         <div className="px-5 md:px-8 py-4 md:py-4">
                             <div className="flex md:grid md:grid-cols-3 items-center justify-between md:gap-4">
-                                <NavbarLogo logo={logo} title={title} />
+                                <NavbarLogo homeHref={homeHref} logo={logo} title={title} />
                                 <NavbarStoreLinks storeLinks={storeLinks} />
                                 <div className="hidden md:flex gap-2.5 justify-end">
                                     <SocialLinks items={socialLinks} />

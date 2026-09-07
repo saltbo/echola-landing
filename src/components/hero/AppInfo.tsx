@@ -19,13 +19,13 @@ const AppInfo = ({ title, description, logo, rating, ageRating, version, minimum
                 <h1 className="text-4xl font-bold text-heading mb-2">{title}</h1>
 
                 <div className="flex items-center gap-3 mb-3 justify-center md:justify-start flex-wrap">
-                    <div className="flex items-center gap-1.5">
+                    {rating && <div className="flex items-center gap-1.5">
                         <RatingStars rating={rating.score} />
                         <span className="text-sm font-medium text-body ml-1">· {rating.count} ratings</span>
-                    </div>
-                    <div className="px-2 py-0.5 rounded-md border border-gray-300 dark:border-white/20 bg-gray-100 dark:bg-white/[0.05] text-xs font-semibold text-gray-700 dark:text-gray-300">
+                    </div>}
+                    {ageRating && <div className="px-2 py-0.5 rounded-md border border-gray-300 dark:border-white/20 bg-gray-100 dark:bg-white/[0.05] text-xs font-semibold text-gray-700 dark:text-gray-300">
                         {ageRating}
-                    </div>
+                    </div>}
                 </div>
 
                 {(version || minimumOS || releaseDate) && (

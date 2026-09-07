@@ -1,7 +1,7 @@
 import { memo } from "react";
 
-const FooterLogo = ({ name, logo }: { name: string; logo: string }) => (
-    <a href="/" className="flex items-center gap-3 group">
+const FooterLogo = ({ name, logo, homeHref = "/" }: { name: string; logo: string; homeHref?: string }) => (
+    <a href={homeHref} className="flex items-center gap-3 group">
         <div className="relative w-10 h-10">
             <div className="absolute inset-0 bg-gradient-to-br from-gray-200/50 to-gray-300/50 dark:from-white/5 dark:to-white/10 rounded-lg blur-sm group-hover:blur-md transition-all" />
             <img

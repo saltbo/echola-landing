@@ -24,6 +24,7 @@
 		"landing page template"
 	],
 	"scripts": {
+		"check:multiapp": "astro build && tsc --noEmit && node --test tests/multiapp.test.mjs",
 		"dev": "astro dev",
 		"start": "astro dev",
 		"build": "astro build",

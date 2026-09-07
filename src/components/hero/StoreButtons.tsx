@@ -6,7 +6,7 @@ const StoreButtons = ({ storeLinks }: { storeLinks: { apple: string; google: str
         {[
             { href: storeLinks.apple, icon: FaApple, label: "Download on the", store: "App Store", iconSize: "w-6 h-6" },
             { href: storeLinks.google, icon: FaGooglePlay, label: "Get it on", store: "Google Play", iconSize: "w-5 h-5" }
-        ].map(({ href, icon: Icon, label, store, iconSize }) => (
+        ].filter(({ href }) => Boolean(href)).map(({ href, icon: Icon, label, store, iconSize }) => (
             <a
                 key={store}
                 href={href}

@@ -1,0 +1,12 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import MarkdownContent from '../../layouts/MarkdownContent.astro';
+import { apps } from '../../lib/apps';
+export function getStaticPaths() {
+ return apps.flatMap(app => Object.entries(app.documents).map(([document, content]) => ({ params: { app: app.slug, document }, props: { app, content } })));
+}
+const { app, content } = Astro.props;
+---
+<Layout title={`${content.title} - ${app.appData.name}`} appData={app.appData} homeHref={`/${app.slug}/`} keywords={app.appData.keywords} socialLinks={app.appData.socialLinks} noindex={content.draft}>
+ <MarkdownContent breadcrumbLabel={content.title} content={content.content} homeHref={`/${app.slug}/`} />
+</Layout>

@@ -1,0 +1,67 @@
+---
+/** biome-ignore-all lint/correctness/noUnusedImports: React components with icons are rendered in client:load mode */
+/** biome-ignore-all lint/correctness/noUnusedVariables: Config variables and store data used in component props */
+
+import FAQ from "@faq/FAQ";
+import Features from "@features/Features";
+import AppHero from "@hero/AppHero";
+import Layout from "@layouts/Layout.astro";
+import Reviews from "@reviews/Reviews";
+import Lightbox from "@screenshots/Lightbox";
+import Screenshots from "@screenshots/Screenshots";
+import { fetchStoreData } from "@utils/fetchStoreData";
+import type { AppDefinition } from '../lib/apps';
+interface Props { app: AppDefinition; homeHref?: string; }
+const { app, homeHref = `/${Astro.props.app.slug}/` } = Astro.props;
+const { appData: siteConfig, features, faqs, reviews, screenshots } = app;
+
+const storeData = await fetchStoreData(app.storeDataConfig);
+
+const appData = {
+	name: storeData.name || siteConfig.name,
+	description: storeData.description || siteConfig.description,
+	logo: storeData.logo || siteConfig.logo,
+	storeLinks: storeData.storeLinks || siteConfig.storeLinks,
+	rating: storeData.rating || siteConfig.rating,
+	ageRating: storeData.ageRating || siteConfig.ageRating,
+	version: storeData.version || siteConfig.version,
+	minimumOS: storeData.minimumOS || siteConfig.minimumOS,
+	releaseDate: storeData.releaseDate || siteConfig.releaseDate,
+	screenshots: storeData.screenshots || screenshots,
+};
+
+const title = app.title ?? `${appData.name} - Modern Mobile App Landing Page Template`;
+const pageDescription = app.pageDescription ?? `${appData.description} Download now for iOS and Android.`;
+---
+
+<Layout title={title} description={pageDescription} appData={appData} homeHref={homeHref} keywords={siteConfig.keywords} socialLinks={siteConfig.socialLinks}>
+  <main class="min-h-screen py-8 container mx-auto px-3 md:px-6">
+    <AppHero 
+      title={appData.name} 
+      description={appData.description} 
+      storeLinks={appData.storeLinks} 
+      logo={appData.logo}
+      rating={appData.rating}
+      ageRating={appData.ageRating}
+      version={appData.version}
+      minimumOS={appData.minimumOS}
+      releaseDate={appData.releaseDate}
+      client:load 
+    />
+    {app.sections?.screenshots !== false && <div class="mb-16"><Screenshots images={appData.screenshots} client:load /></div>}
+    <Features items={features} client:load />
+    {app.sections?.reviews !== false && <Reviews items={reviews} client:visible />}
+    <FAQ items={faqs} client:load />
+  </main>
+</Layout>
+
+{app.sections?.screenshots !== false && <Lightbox images={appData.screenshots} client:load />}
+
+<style is:global>
+  .screenshots-scroll {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    &::-webkit-scrollbar { display: none; }
+  }
+</style>

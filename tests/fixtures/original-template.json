@@ -1,0 +1,337 @@
+{
+  "page": "\n\n<Layout title={title} description={pageDescription} appData={appData}>\n  <main class=\"min-h-screen py-8 container mx-auto px-3 md:px-6\">\n    <AppHero \n      title={appData.name} \n      description={appData.description} \n      storeLinks={appData.storeLinks} \n      logo={appData.logo}\n      rating={appData.rating}\n      ageRating={appData.ageRating}\n      version={appData.version}\n      minimumOS={appData.minimumOS}\n      releaseDate={appData.releaseDate}\n      client:load \n    />\n    <div class=\"mb-16\"><Screenshots images={appData.screenshots} client:load /></div>\n    <Features items={features} client:load />\n    <Reviews items={reviews} client:visible />\n    <FAQ items={faqs} client:load />\n  </main>\n</Layout>\n\n<Lightbox images={appData.screenshots} client:load />\n\n<style is:global>\n  .screenshots-scroll {\n    scroll-behavior: smooth;\n    -webkit-overflow-scrolling: touch;\n    scrollbar-width: none;\n    &::-webkit-scrollbar { display: none; }\n  }\n</style>\n",
+  "files": {
+    "src/components/faq/FAQ.tsx": {
+      "classes": [
+        "className=\"mb-0\"",
+        "className=\"mb-6 text-2xl font-semibold text-heading\"",
+        "className=\"space-y-4\"",
+        "className=\"card-base\"",
+        "className=\"group\"",
+        "className=\"flex cursor-pointer items-center justify-between p-5 md:p-6 hover:bg-gray-50 dark:hover:bg-white/[0.02] transition-colors rounded-2xl\"",
+        "className=\"pr-6 font-semibold text-lg text-gray-800 dark:text-white\"",
+        "className=\"h-5 w-5 flex-shrink-0 group-open:rotate-180 text-gray-500 dark:text-gray-400 transition-transform duration-200\"",
+        "className=\"border-t border-gray-200 dark:border-white/5 px-5 pb-5 pt-5 md:px-6 md:pb-6 md:pt-6\"",
+        "className=\"text-body leading-relaxed\""
+      ],
+      "styles": []
+    },
+    "src/components/faq/data.ts": {
+      "classes": [],
+      "styles": []
+    },
+    "src/components/features/Features.tsx": {
+      "classes": [
+        "className=\"mb-16\"",
+        "className=\"mb-6 text-2xl font-semibold text-heading\"",
+        "className=\"grid grid-cols-1 gap-6 md:grid-cols-3\"",
+        "className=\"card-base p-5 md:p-6\"",
+        "className=\"mb-4 flex h-14 w-14 items-center justify-center rounded-xl bg-gray-100 dark:bg-white/[0.04]\"",
+        "className=\"h-7 w-7 text-heading opacity-90\"",
+        "className=\"mb-2.5 text-xl font-semibold text-gray-800 dark:text-white\"",
+        "className=\"text-base leading-relaxed text-body\""
+      ],
+      "styles": []
+    },
+    "src/components/features/data.ts": {
+      "classes": [],
+      "styles": []
+    },
+    "src/components/footer/Footer.tsx": {
+      "classes": [
+        "className=\"py-10 bg-gray-50 dark:bg-black\"",
+        "className=\"container mx-auto px-3 md:px-6\"",
+        "className=\"mb-8 h-px w-full bg-gray-200 dark:bg-gray-800\"",
+        "className=\"flex flex-col gap-6 md:hidden\"",
+        "className=\"flex items-center justify-between\"",
+        "className=\"text-lg text-body leading-relaxed\"",
+        "className=\"flex items-center justify-between\"",
+        "className=\"flex gap-3\"",
+        "className=\"text-center\"",
+        "className=\"text-base text-body\"",
+        "className=\"hidden md:flex flex-col gap-4\"",
+        "className=\"flex items-start justify-between\"",
+        "className=\"flex flex-col gap-3 max-w-3xl\"",
+        "className=\"text-lg text-body leading-relaxed\"",
+        "className=\"flex items-center justify-between pt-6 border-t border-gray-200/30 dark:border-gray-700/30\"",
+        "className=\"flex items-center gap-6\"",
+        "className=\"flex gap-3\"",
+        "className=\"text-base text-body\""
+      ],
+      "styles": []
+    },
+    "src/components/footer/FooterLegal.tsx": {
+      "classes": [
+        "className={`flex items-center gap-2 text-base ${className}`}",
+        "className=\"flex items-center gap-2 text-body hover:text-heading transition-colors font-medium\"",
+        "className=\"text-gray-400 dark:text-gray-500\"",
+        "className=\"flex items-center gap-2 text-body hover:text-heading transition-colors font-medium\""
+      ],
+      "styles": []
+    },
+    "src/components/footer/FooterLogo.tsx": {
+      "classes": [
+        "className=\"flex items-center gap-3 group\"",
+        "className=\"relative w-10 h-10\"",
+        "className=\"absolute inset-0 bg-gradient-to-br from-gray-200/50 to-gray-300/50 dark:from-white/5 dark:to-white/10 rounded-lg blur-sm group-hover:blur-md transition-all\"",
+        "className=\"relative w-full h-full rounded-lg object-cover border border-gray-200/50 dark:border-white/10\"",
+        "className=\"text-xl font-bold text-heading group-hover:text-gray-900 dark:group-hover:text-white transition-colors\""
+      ],
+      "styles": []
+    },
+    "src/components/hero/AppHero.tsx": {
+      "classes": [
+        "className=\"mb-16 flex flex-col md:flex-row gap-8 items-start\""
+      ],
+      "styles": []
+    },
+    "src/components/hero/AppInfo.tsx": {
+      "classes": [
+        "className=\"flex flex-1 flex-col md:flex-row gap-8 items-start text-center md:text-left\"",
+        "className=\"flex-shrink-0 self-center md:self-start\"",
+        "className=\"group/icon rounded-2xl border border-gray-200/50 dark:border-white/10 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-white/[0.02] dark:to-white/[0.05] p-7 w-56 h-56 flex items-center justify-center shadow-sm hover:shadow-md transition-all duration-300\"",
+        "className=\"h-48 w-48 rounded-2xl object-cover group-hover/icon:scale-105 transition-transform duration-300\"",
+        "className=\"flex flex-1 flex-col justify-between\"",
+        "className=\"text-4xl font-bold text-heading mb-2\"",
+        "className=\"flex items-center gap-3 mb-3 justify-center md:justify-start flex-wrap\"",
+        "className=\"flex items-center gap-1.5\"",
+        "className=\"text-sm font-medium text-body ml-1\"",
+        "className=\"px-2 py-0.5 rounded-md border border-gray-300 dark:border-white/20 bg-gray-100 dark:bg-white/[0.05] text-xs font-semibold text-gray-700 dark:text-gray-300\"",
+        "className=\"flex items-center gap-2 mb-4 justify-center md:justify-start flex-wrap text-xs\"",
+        "className=\"info-badge\"",
+        "className=\"font-semibold text-heading\"",
+        "className=\"text-body\"",
+        "className=\"info-badge\"",
+        "className=\"font-semibold text-heading\"",
+        "className=\"text-body\"",
+        "className=\"info-badge\"",
+        "className=\"font-semibold text-heading\"",
+        "className=\"text-body\"",
+        "className=\"text-lg text-body leading-relaxed max-w-2xl mx-auto md:mx-0\""
+      ],
+      "styles": []
+    },
+    "src/components/hero/StoreButtons.tsx": {
+      "classes": [
+        "className=\"w-full max-w-md mx-auto grid grid-cols-1 xs:grid-cols-2 gap-3 md:flex md:flex-col md:mx-0 md:w-auto md:flex-shrink-0\"",
+        "className=\"group button-base flex items-center gap-3 px-5 py-4 justify-start hover:scale-[1.02] hover:shadow-md active:scale-[0.98] transition-all duration-200 md:min-w-[200px]\"",
+        "className=\"flex items-center justify-center w-7 h-7 flex-shrink-0\"",
+        "className={`text-gray-600 dark:text-gray-300 group-hover:text-gray-800 dark:group-hover:text-white ${iconSize} transition-colors`}",
+        "className=\"text-left min-w-0\"",
+        "className=\"text-xs font-medium text-muted group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors\"",
+        "className=\"text-base font-semibold tracking-wide text-heading group-hover:text-gray-900 dark:group-hover:text-white transition-colors\""
+      ],
+      "styles": []
+    },
+    "src/components/reviews/RatingStars.tsx": {
+      "classes": [
+        "className=\"flex items-center gap-1\"",
+        "className=\"w-3.5 h-3.5 text-yellow-500 dark:text-yellow-400\"",
+        "className=\"w-3.5 h-3.5 text-yellow-500 dark:text-yellow-400\"",
+        "className=\"w-3.5 h-3.5 text-yellow-500 dark:text-yellow-400\""
+      ],
+      "styles": []
+    },
+    "src/components/reviews/Reviews.tsx": {
+      "classes": [
+        "className=\"mb-16\"",
+        "className=\"mb-6 text-2xl font-semibold text-heading\"",
+        "className=\"grid grid-cols-1 gap-4 md:grid-cols-2\"",
+        "className=\"card-base\"",
+        "className=\"p-5 md:p-6 border-b border-gray-200 dark:border-white/5 bg-gray-50 dark:bg-white/[0.02]\"",
+        "className=\"flex items-center gap-4\"",
+        "className=\"h-12 w-12 rounded-full object-cover border border-gray-300 dark:border-white/10\"",
+        "className=\"flex h-12 w-12 items-center justify-center rounded-full bg-gray-200 dark:bg-white/[0.08] text-lg font-semibold text-gray-700 dark:text-white\"",
+        "className=\"font-semibold text-lg text-gray-800 dark:text-white\"",
+        "className=\"p-5 md:p-6\"",
+        "className=\"text-body leading-relaxed\""
+      ],
+      "styles": []
+    },
+    "src/components/reviews/data.ts": {
+      "classes": [],
+      "styles": []
+    },
+    "src/components/screenshots/DeviceButton.tsx": {
+      "classes": [
+        "className={`relative rounded-lg px-4 py-2 text-sm font-medium flex items-center gap-2 transition-colors ${isActive\n                ? \"text-heading\"\n                : \"text-muted hover:text-heading hover:bg-gray-100 dark:hover:bg-white/[0.06]\"\n            }`}",
+        "className=\"absolute inset-0 rounded-lg bg-gray-100 dark:bg-white/10 shadow-md border border-gray-300/80 dark:border-white/10\"",
+        "className=\"relative z-10 hidden sm:inline\"",
+        "className=\"relative z-10\""
+      ],
+      "styles": []
+    },
+    "src/components/screenshots/DeviceToggle.tsx": {
+      "classes": [
+        "className=\"flex items-center justify-center gap-1 rounded-xl border border-gray-300 dark:border-white/10 bg-white dark:bg-white/[0.04] p-1 shadow-lg\"",
+        "className=\"w-4 h-4\"",
+        "className=\"w-4 h-4\""
+      ],
+      "styles": []
+    },
+    "src/components/screenshots/Lightbox.tsx": {
+      "classes": [
+        "className=\"fixed inset-0 z-50 flex items-center justify-center bg-white/70 dark:bg-black/70 backdrop-blur-md\""
+      ],
+      "styles": []
+    },
+    "src/components/screenshots/LightboxControls.tsx": {
+      "classes": [
+        "className=\"button-base absolute right-4 top-4 p-3 text-heading transition-colors rounded-full bg-white/80 dark:bg-black/60 hover:bg-white/90 dark:hover:bg-black/80 backdrop-blur-sm border-gray-200/50 dark:border-white/10 shadow-lg z-10\"",
+        "className=\"button-base absolute left-4 top-1/2 -translate-y-1/2 p-3 text-heading transition-colors rounded-full bg-white/80 dark:bg-black/60 hover:bg-white/90 dark:hover:bg-black/80 backdrop-blur-sm border-gray-200/50 dark:border-white/10 shadow-lg z-10\"",
+        "className=\"button-base absolute right-4 top-1/2 -translate-y-1/2 p-3 text-heading transition-colors rounded-full bg-white/80 dark:bg-black/60 hover:bg-white/90 dark:hover:bg-black/80 backdrop-blur-sm border-gray-200/50 dark:border-white/10 shadow-lg z-10\""
+      ],
+      "styles": []
+    },
+    "src/components/screenshots/LightboxImage.tsx": {
+      "classes": [
+        "className=\"max-h-[95vh] max-w-[95vw] md:max-h-[90vh] md:max-w-[85vw] object-contain rounded-xl shadow-2xl\""
+      ],
+      "styles": []
+    },
+    "src/components/screenshots/LightboxIndicators.tsx": {
+      "classes": [
+        "className=\"absolute bottom-4 left-0 right-0 flex justify-center gap-2\"",
+        "className={`h-2 w-2 rounded-full transition-colors ${index === currentIndex\n                    ? \"bg-gray-800 dark:bg-white\"\n                    : \"bg-gray-500 dark:bg-white/60 hover:bg-gray-700 dark:hover:bg-white/80\"\n                    }`}"
+      ],
+      "styles": []
+    },
+    "src/components/screenshots/Screenshots.tsx": {
+      "classes": [
+        "className=\"mb-16\"",
+        "className=\"mb-6 flex items-center justify-between\"",
+        "className=\"text-2xl font-semibold text-heading\"",
+        "className=\"relative overflow-hidden\"",
+        "className=\"screenshots-scrollbar overflow-x-scroll pb-4\"",
+        "className=\"flex gap-6\"",
+        "className=\"relative flex-shrink-0 overflow-hidden rounded-xl focus:outline-none\"",
+        "className={`rounded-xl border border-gray-300 dark:border-white/10 object-cover shadow-lg ${activeDevice === \"iphone\"\n\t\t\t\t\t\t\t\t\t\t\t? \"aspect-[9/16] w-[260px]\"\n\t\t\t\t\t\t\t\t\t\t\t: \"aspect-[4/3] w-[360px]\"\n\t\t\t\t\t\t\t\t\t\t\t}`}"
+      ],
+      "styles": []
+    },
+    "src/components/screenshots/data.ts": {
+      "classes": [],
+      "styles": []
+    },
+    "src/components/social/SocialLinks.tsx": {
+      "classes": [
+        "className=\"flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10 border border-gray-200/50 dark:border-white/5 transition-colors\"",
+        "className=\"w-6 h-6 text-gray-600 dark:text-gray-300\""
+      ],
+      "styles": []
+    },
+    "src/components/social/data.ts": {
+      "classes": [],
+      "styles": []
+    },
+    "src/components/ui/navigation/Breadcrumbs.tsx": {
+      "classes": [
+        "className=\"flex items-center gap-2 text-base text-body mb-8\"",
+        "className=\"hover:text-heading p-2 -ml-2 transition-colors\"",
+        "className=\"w-5 h-5\"",
+        "className=\"flex items-center gap-2\"",
+        "className=\"w-5 h-5 text-gray-400 dark:text-gray-600\"",
+        "className=\"hover:text-heading transition-colors\"",
+        "className=\"text-heading font-medium\""
+      ],
+      "styles": []
+    },
+    "src/components/ui/navigation/FloatingNavbar.tsx": {
+      "classes": [
+        "className=\"fixed top-0 left-0 right-0 z-50 flex justify-center py-3 px-3 md:px-6\"",
+        "className=\"w-full max-w-[600px] lg:max-w-[1500px] mx-auto bg-white/90 dark:bg-black/90 backdrop-blur-xl border border-gray-200/50 dark:border-gray-800/50 shadow-lg shadow-gray-200/20 dark:shadow-black/40 rounded-2xl\"",
+        "className=\"px-5 md:px-8 py-4 md:py-4\"",
+        "className=\"flex md:grid md:grid-cols-3 items-center justify-between md:gap-4\"",
+        "className=\"hidden md:flex gap-2.5 justify-end\""
+      ],
+      "styles": []
+    },
+    "src/components/ui/navigation/NavbarLogo.tsx": {
+      "classes": [
+        "className=\"flex items-center gap-3 md:gap-4 justify-start group\"",
+        "className=\"relative\"",
+        "className=\"absolute inset-0 bg-gradient-to-br from-gray-200/50 to-gray-300/50 dark:from-white/5 dark:to-white/10 rounded-xl blur-sm group-hover:blur-md transition-all\"",
+        "className=\"relative h-11 w-11 md:h-11 md:w-11 rounded-xl object-cover flex-shrink-0 border border-gray-200/50 dark:border-white/10\"",
+        "className=\"text-lg md:text-xl font-bold text-heading tracking-tight group-hover:text-gray-900 dark:group-hover:text-white transition-colors\""
+      ],
+      "styles": []
+    },
+    "src/components/ui/navigation/NavbarStoreLinks.tsx": {
+      "classes": [
+        "className=\"flex gap-2.5 md:gap-3 md:justify-center\"",
+        "className=\"group store-button\"",
+        "className=\"text-gray-600 dark:text-gray-300 group-hover:scale-110 group-hover:text-gray-800 dark:group-hover:text-white transition-all w-6 h-6 md:w-6 md:h-6\"",
+        "className=\"hidden lg:block text-left min-w-0\"",
+        "className=\"text-xs font-medium text-gray-500 dark:text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300 leading-tight transition-colors\"",
+        "className=\"text-base font-semibold tracking-wide text-heading group-hover:text-gray-900 dark:group-hover:text-white leading-tight transition-colors\"",
+        "className=\"group store-button\"",
+        "className=\"text-gray-600 dark:text-gray-300 group-hover:scale-110 group-hover:text-gray-800 dark:group-hover:text-white transition-all w-5 h-5 md:w-5 md:h-5\"",
+        "className=\"hidden lg:block text-left min-w-0\"",
+        "className=\"text-xs font-medium text-gray-500 dark:text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300 leading-tight transition-colors\"",
+        "className=\"text-base font-semibold tracking-wide text-heading group-hover:text-gray-900 dark:group-hover:text-white leading-tight transition-colors\""
+      ],
+      "styles": []
+    },
+    "src/components/ui/navigation/TableOfContents.tsx": {
+      "classes": [
+        "className=\"sticky top-24 hidden xl:block\"",
+        "className=\"mb-5 text-sm font-bold text-heading uppercase tracking-wider\"",
+        "className=\"space-y-3 text-base border-l-2 border-gray-200 dark:border-white/10\"",
+        "className={`block py-2 transition-all duration-200 border-l-2 -ml-[2px] ${level === 3 ? \"pl-7\" : \"pl-5\"\n                                } ${activeId === id\n                                    ? \"border-gray-900 dark:border-white text-heading font-semibold\"\n                                    : \"border-transparent text-gray-600 dark:text-gray-400 hover:text-heading hover:border-gray-400 dark:hover:border-gray-600\"\n                                }`}"
+      ],
+      "styles": []
+    },
+    "src/components/ui/shared/AnimatedContent.tsx": {
+      "classes": [
+        "className=\"flex-1 min-w-0\""
+      ],
+      "styles": []
+    },
+    "src/components/ui/shared/AnimatedSidebar.tsx": {
+      "classes": [
+        "className=\"w-72 flex-shrink-0 hidden xl:block\""
+      ],
+      "styles": []
+    },
+    "src/components/ui/shared/BackToTop.tsx": {
+      "classes": [
+        "className=\"button-base fixed bottom-8 right-8 z-50 flex h-14 w-14 items-center justify-center text-heading shadow-lg hover:shadow-xl transition-shadow duration-200 p-0\""
+      ],
+      "styles": []
+    },
+    "src/components/ui/shared/ThemeToggle.tsx": {
+      "classes": [
+        "className=\"flex items-center gap-1 rounded-xl bg-gray-100 dark:bg-white/5 border border-gray-200/50 dark:border-white/5 p-1\"",
+        "className=\"w-8 h-8\"",
+        "className={`relative rounded-lg p-2 transition-colors ${isActive\n\t\t\t\t\t\t\t\t? \"text-heading\"\n\t\t\t\t\t\t\t\t: \"text-muted hover:text-body hover:bg-gray-200 dark:hover:bg-white/10\"\n\t\t\t\t\t\t\t\t}`}",
+        "className=\"absolute inset-0 rounded-lg bg-white dark:bg-white/10 shadow-sm border border-gray-200 dark:border-white/10\"",
+        "className=\"relative z-10 h-5 w-5\""
+      ],
+      "styles": []
+    },
+    "src/layouts/Layout.astro": {
+      "classes": [
+        "class=\"bg-gray-50 text-gray-900 dark:bg-black dark:text-white\"",
+        "class=\"mx-auto h-screen max-w-full px-2 lg:max-w-[1500px]\""
+      ],
+      "styles": [
+        "<style is:global>\n  html.theme-switching *,\n  html.theme-switching {\n    transition: none !important;\n  }\n  \n  html.light { color-scheme: light; }\n  html.dark { color-scheme: dark; }\n\n  .screenshots-scrollbar::-webkit-scrollbar {\n    height: 8px;\n  }\n  \n  .screenshots-scrollbar::-webkit-scrollbar-track {\n    background: rgba(0, 0, 0, 0.05);\n    border-radius: 4px;\n  }\n  \n  .dark .screenshots-scrollbar::-webkit-scrollbar-track {\n    background: rgba(255, 255, 255, 0.05);\n  }\n  \n  .screenshots-scrollbar::-webkit-scrollbar-thumb {\n    background: rgba(0, 0, 0, 0.15);\n    border-radius: 4px;\n  }\n  \n  .dark .screenshots-scrollbar::-webkit-scrollbar-thumb {\n    background: rgba(255, 255, 255, 0.15);\n  }\n  \n  .screenshots-scrollbar::-webkit-scrollbar-thumb:hover {\n    background: rgba(0, 0, 0, 0.25);\n  }\n  \n  .dark .screenshots-scrollbar::-webkit-scrollbar-thumb:hover {\n    background: rgba(255, 255, 255, 0.25);\n  }\n</style>"
+      ]
+    },
+    "src/layouts/MarkdownContent.astro": {
+      "classes": [
+        "class=\"pt-8 md:pt-12 px-4 md:px-6\"",
+        "class=\"max-w-[1500px] mx-auto\"",
+        "class=\"flex gap-16\"",
+        "class=\"prose\""
+      ],
+      "styles": [
+        "<style is:global>\n\t.prose { \n\t\tmax-width: 1000px;\n\t\tline-height: 1.7;\n\t\tcolor: #374151;\n\t}\n\t.dark .prose { color: #d1d5db; }\n\t\n\t.prose h1, .prose h2, .prose h3 { \n\t\tscroll-margin-top: 6rem;\n\t\tcolor: #111827;\n\t}\n\t.dark .prose h1, .dark .prose h2, .dark .prose h3 { color: #f9fafb; }\n\n\t.prose h1 {\n\t\tfont-size: 2.5rem;\n\t\tfont-weight: 800;\n\t\tmargin: 0 0 2rem;\n\t\tletter-spacing: -0.025em;\n\t}\n\n\t.prose h2 {\n\t\tfont-size: 1.875rem;\n\t\tfont-weight: 700;\n\t\tmargin: 3.5rem 0 1.25rem;\n\t\tpadding-bottom: 0.5rem;\n\t\tborder-bottom: 1px solid rgba(156, 163, 175, 0.2);\n\t}\n\t.dark .prose h2 { border-color: rgba(255, 255, 255, 0.1); }\n\n\t.prose h3 { \n\t\tfont-size: 1.5rem;\n\t\tfont-weight: 600;\n\t\tmargin: 2.5rem 0 1rem;\n\t}\n\n\t.prose p { margin: 1.5rem 0; font-size: 1.0625rem; }\n\t.prose strong { font-weight: 600; color: inherit; }\n\n\t.prose ul, .prose ol { margin: 1.5rem 0; padding-left: 1.75rem; }\n\t.prose li { margin: 0.75rem 0; padding-left: 0.5rem; }\n\t.prose li::marker { color: #6b7280; }\n\t.dark .prose li::marker { color: #9ca3af; }\n\n\t.prose a { \n\t\tcolor: #2563eb;\n\t\ttext-decoration: underline;\n\t\ttext-decoration-color: rgba(37, 99, 235, 0.3);\n\t\ttext-underline-offset: 3px;\n\t\ttransition: all 0.2s;\n\t}\n\t.prose a:hover { color: #1d4ed8; text-decoration-color: currentColor; }\n\t.dark .prose a { color: #60a5fa; }\n\t.dark .prose a:hover { color: #93c5fd; }\n\n\t.prose code {\n\t\tbackground: rgba(156, 163, 175, 0.1);\n\t\tborder: 1px solid rgba(156, 163, 175, 0.2);\n\t\tborder-radius: 0.375rem;\n\t\tpadding: 0.2em 0.4em;\n\t\tfont-size: 0.875em;\n\t\tcolor: #dc2626;\n\t\tfont-family: ui-monospace, monospace;\n\t}\n\t.dark .prose code { background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.1); color: #fca5a5; }\n\n\t.prose pre {\n\t\tbackground: #1e293b;\n\t\tborder: 1px solid rgba(148, 163, 184, 0.2);\n\t\tborder-radius: 0.75rem;\n\t\tpadding: 1.25rem;\n\t\tmargin: 2rem 0;\n\t\toverflow-x: auto;\n\t}\n\t.dark .prose pre { background: rgba(255, 255, 255, 0.03); border-color: rgba(255, 255, 255, 0.1); }\n\t.prose pre code { background: transparent; border: none; padding: 0; color: #e2e8f0; }\n\n\t.prose blockquote { border-left: 4px solid #3b82f6; padding-left: 1.25rem; margin: 2rem 0; font-style: italic; }\n\t.dark .prose blockquote { border-color: #60a5fa; }\n\n\t.prose table { width: 100%; margin: 2rem 0; border-collapse: collapse; }\n\t.prose thead { border-bottom: 2px solid #e5e7eb; }\n\t.dark .prose thead { border-color: rgba(255, 255, 255, 0.1); }\n\t.prose th { padding: 0.75rem 1rem; text-align: left; font-weight: 600; }\n\t.prose td { padding: 0.75rem 1rem; border-bottom: 1px solid #f3f4f6; }\n\t.dark .prose td { border-color: rgba(255, 255, 255, 0.05); }\n\n\t.prose hr { margin: 3rem 0; border: 0; border-top: 1px solid #e5e7eb; }\n\t.dark .prose hr { border-color: rgba(255, 255, 255, 0.1); }\n\n\t@media (max-width: 768px) {\n\t\t.prose h1 { font-size: 2rem; margin-bottom: 1.5rem; }\n\t\t.prose h2 { font-size: 1.5rem; margin-top: 2.5rem; }\n\t\t.prose h3 { font-size: 1.25rem; margin-top: 2rem; }\n\t}\n</style>"
+      ]
+    },
+    "tailwind.config.cjs": {
+      "classes": [],
+      "styles": []
+    }
+  }
+}
