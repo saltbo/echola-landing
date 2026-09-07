@@ -43,8 +43,9 @@ expiry; bucket lifecycle and other provider retention must be verified separatel
 
 - In-app account deletion: no complete deletion workflow was found. Clearing
   history or signing out must not be presented as deletion.
-- Explicit permission before sending user data to third-party AI: the current
-  learning action has no separately evidenced consent flow.
+- Explicit permission before sending user data to third-party AI: a session-scoped
+  consent dialog is now implemented locally in the native project. It is not yet
+  part of the uploaded TestFlight build; device/release acceptance remains pending.
 - In-app policy/support entry points: About currently only shows version/build.
 
 Do not label these resolved through website copy alone. The native project has

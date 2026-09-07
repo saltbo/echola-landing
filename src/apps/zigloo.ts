@@ -83,7 +83,7 @@ export default {
     },
     {
       "question": "What happens when I request an AI explanation?",
-      "answer": "The requested subtitle text, available surrounding lines, relevant media context and a pseudonymous safety identifier are sent to OpenAI to generate an explanation. Opening or navigating the learning panel does not automatically request a new explanation."
+      "answer": "When you request learning, Zigloo sends the selected subtitle text, available surrounding lines, relevant media context and a pseudonymous account safety identifier to OpenAI to generate an explanation. Opening learning or manually choosing another sentence can request an explanation; automatic subtitle updates during playback do not."
     },
     {
       "question": "Can I download Zigloo now?",
