@@ -7,6 +7,6 @@ export function getStaticPaths() {
 }
 const { app, content } = Astro.props;
 ---
-<Layout title={`${content.title} - ${app.appData.name}`} appData={app.appData} homeHref={`/${app.slug}/`} keywords={app.appData.keywords} socialLinks={app.appData.socialLinks} noindex={content.draft}>
+<Layout title={`${content.title} - ${app.appData.name}`} appData={app.appData} homeHref={`/${app.slug}/`} keywords={app.appData.keywords} socialLinks={app.appData.socialLinks} noindex={content.draft} supportHref={app.documents.support ? `/${app.slug}/support/` : undefined}>
  <MarkdownContent breadcrumbLabel={content.title} content={content.content} homeHref={`/${app.slug}/`} />
 </Layout>

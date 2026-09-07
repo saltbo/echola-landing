@@ -11,12 +11,14 @@ const Footer = ({
 	logo,
 	description,
  homeHref = "/",
+ supportHref,
  socialLinks = appData.socialLinks
 }: {
 	name: string;
 	logo: string;
 	description: string;
  homeHref?: string;
+ supportHref?: string;
  socialLinks?: typeof appData.socialLinks;
 }) => {
 	const currentYear = new Date().getFullYear();
@@ -49,7 +51,7 @@ const Footer = ({
 						<div className="flex gap-3">
 							<SocialLinks items={socialLinks} />
 						</div>
-						<FooterLegal homeHref={homeHref} />
+						<FooterLegal homeHref={homeHref} supportHref={supportHref} />
 					</div>
 
 					<div className="text-center">
@@ -74,7 +76,7 @@ const Footer = ({
 							</div>
 							<div className="text-base text-body">{copyrightText}</div>
 						</div>
-						<FooterLegal homeHref={homeHref} />
+						<FooterLegal homeHref={homeHref} supportHref={supportHref} />
 					</div>
 				</div>
 			</div>

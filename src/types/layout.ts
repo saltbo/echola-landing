@@ -2,6 +2,7 @@ import type { SocialLink } from "./content";
 import type { StoreData } from "./store";
 
 export interface LayoutWithAppDataProps {
+ supportHref?: string;
  homeHref?: string;
  keywords?: readonly string[];
  socialLinks?: SocialLink[];

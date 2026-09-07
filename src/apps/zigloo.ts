@@ -37,7 +37,7 @@ export default {
     },
     {
       "title": "Explore words in context",
-      "description": "Select a word inside the learning panel to explore it as used in the scene. Switch between word and sentence learning without leaving the player.",
+      "description": "Review useful words and expressions alongside the sentence translation and structure explanation. Vocabulary is selected from the subtitle context, so you can study the line without leaving the player.",
       "icon": "FiBook"
     },
     {
@@ -67,7 +67,7 @@ export default {
     },
     {
       "question": "What can I learn from a subtitle?",
-      "answer": "Request a sentence explanation or select a word in the learning panel. Explanations use available subtitle context. AI can make mistakes; treat its answers as learning assistance rather than an authoritative reference."
+      "answer": "Request an explanation with a translation, useful vocabulary and sentence structure. Explanations use available subtitle context. AI can make mistakes; treat its answers as learning assistance rather than an authoritative reference."
     },
     {
       "question": "Can I use embedded subtitles?",
@@ -83,7 +83,7 @@ export default {
     },
     {
       "question": "What happens when I request an AI explanation?",
-      "answer": "The requested subtitle text, available surrounding lines and relevant media context are sent to the online AI service to generate an explanation. Opening or navigating the learning panel does not automatically request a new explanation."
+      "answer": "The requested subtitle text, available surrounding lines, relevant media context and a pseudonymous safety identifier are sent to OpenAI to generate an explanation. Opening or navigating the learning panel does not automatically request a new explanation."
     },
     {
       "question": "Can I download Zigloo now?",
@@ -98,7 +98,7 @@ export default {
   "documents": {
     "support": {
       "title": "Support",
-      "content": "# Zigloo Support\n\n## Get started\n\n1. Sign in to Zigloo.\n2. Add a WebDAV connection and select folders to scan.\n3. Open a video and select an English subtitle track.\n4. Open learning from the player, then request a sentence or word explanation.\n5. Choose Resume video to continue watching.\n\n## My library cannot connect\n\nCheck the connection address, credentials, network access and folder permissions. Confirm you can access the folder through your WebDAV provider. Never include credentials or private media URLs in a support report.\n\n## Subtitles or explanations are unavailable\n\nSelect a supported text subtitle track. Try an external subtitle file or available online subtitle. Learning depends on available subtitle context; a newly opened video may not have decoded neighboring lines yet. Online searches and AI explanations require network access.\n\n## Watch progress differs on another device\n\nConfirm both devices use the same account with sync enabled and network access. The same media source must be available on both. Video files and learning records are not synchronized.\n\n## Report a beta issue\n\nIf you received the iOS beta through TestFlight, use its feedback option. Include the app version, device model, expected behavior and steps to reproduce the issue. Remove personal information from screenshots and never include passwords or private media links.\n\nA public support contact will be added before general release.\n",
+      "content": "# Zigloo Support\n\n## Get started\n\n1. Sign in to Zigloo.\n2. Add a WebDAV connection and select folders to scan.\n3. Open a video and select an English subtitle track.\n4. Open learning from the player, then request a subtitle explanation.\n5. Choose Resume video to continue watching.\n\n## My library cannot connect\n\nCheck the connection address, credentials, network access and folder permissions. Confirm you can access the folder through your WebDAV provider. Never include credentials or private media URLs in a support report.\n\n## Subtitles or explanations are unavailable\n\nSelect a supported text subtitle track. Try an external subtitle file or available online subtitle. Learning depends on available subtitle context; a newly opened video may not have decoded neighboring lines yet. Online searches and AI explanations require network access.\n\n## Watch progress differs on another device\n\nConfirm both devices use the same account with sync enabled and network access. The same media source must be available on both. Video files and learning records are not synchronized.\n\n## Report a beta issue\n\nIf you received the iOS beta through TestFlight, use its feedback option. Include the app version, device model, expected behavior and steps to reproduce the issue. Remove personal information from screenshots and never include passwords or private media links.\n\nA public support contact will be added before general release.\n",
       "draft": true
     },
     "privacy": {

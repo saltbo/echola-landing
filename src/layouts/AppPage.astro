@@ -34,7 +34,7 @@ const title = app.title ?? `${appData.name} - Modern Mobile App Landing Page Tem
 const pageDescription = app.pageDescription ?? `${appData.description} Download now for iOS and Android.`;
 ---
 
-<Layout title={title} description={pageDescription} appData={appData} homeHref={homeHref} keywords={siteConfig.keywords} socialLinks={siteConfig.socialLinks}>
+<Layout title={title} description={pageDescription} appData={appData} homeHref={homeHref} keywords={siteConfig.keywords} socialLinks={siteConfig.socialLinks} supportHref={app.documents.support ? `${homeHref}support/` : undefined}>
   <main class="min-h-screen py-8 container mx-auto px-3 md:px-6">
     <AppHero 
       title={appData.name} 

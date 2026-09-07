@@ -10,7 +10,7 @@ import { appData as defaultAppData } from "../data";
 
 interface Props extends LayoutWithAppDataProps {}
 
-const { title, description, appData, homeHref = "/", keywords = defaultAppData.keywords, socialLinks = defaultAppData.socialLinks, noindex = false } = Astro.props;
+const { title, description, appData, supportHref, homeHref = "/", keywords = defaultAppData.keywords, socialLinks = defaultAppData.socialLinks, noindex = false } = Astro.props;
 const navData = appData || defaultAppData;
 const canonicalURL = Astro.site
 	? new URL(Astro.url.pathname, Astro.site)
@@ -64,7 +64,7 @@ const canonicalURL = Astro.site
 	<FloatingNavbar logo={navData.logo} title={navData.name} storeLinks={navData.storeLinks} socialLinks={socialLinks} homeHref={homeHref} client:load />
     <div class="mx-auto h-screen max-w-full px-2 lg:max-w-[1500px]">
       <main><slot /></main>
-      <Footer homeHref={homeHref} socialLinks={socialLinks} name={navData.name} logo={navData.logo} description={navData.description} client:load />
+      <Footer supportHref={supportHref} homeHref={homeHref} socialLinks={socialLinks} name={navData.name} logo={navData.logo} description={navData.description} client:load />
     </div>
     <BackToTop client:load />
   </body>
