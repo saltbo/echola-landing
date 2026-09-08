@@ -11,7 +11,7 @@ for both supported device types, features, reviews, FAQs, store links and docume
 An empty store URL means that platform is not available yet. Echola's existing
 placeholder assets and content are deliberately preserved pending a separate
 content update. Zigloo has no public download, screenshots or reviews configured;
-its legal/support documents are drafts and excluded from indexing.
+its legal/support documents are published and included in the sitemap.
 Optional `sections` flags hide unavailable screenshots or reviews without changing
 the template. Echola retains both sections. `title` and `pageDescription` may
 customize each product’s search metadata.

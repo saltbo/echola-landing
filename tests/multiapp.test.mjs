@@ -26,8 +26,13 @@ test('Product navigation and legal pages stay scoped', () => {
  assert.ok(!zigloo.includes('id6757395298'));
  assert.ok(!zigloo.includes('href=""'));
  assert.ok(!zigloo.includes('100+ ratings'));
- assert.ok(html('zigloo/privacy/index.html').includes('content="noindex"'));
- assert.ok(!html('sitemap.xml').includes('/zigloo/privacy/'));
+ assert.ok(!html('zigloo/privacy/index.html').includes('content="noindex"'));
+ assert.ok(html('sitemap.xml').includes('/zigloo/privacy/'));
+ for (const doc of ['privacy', 'terms']) {
+  const legal = html(`zigloo/${doc}/index.html`);
+  assert.ok(legal.includes('Effective date: September 8, 2026'));
+  assert.ok(!/draft|must be finalized|being verified/i.test(legal));
+ }
 });
 
 test('shared detail markup and every original component style match the original template', () => {
