@@ -30,9 +30,16 @@ test('Product navigation and legal pages stay scoped', () => {
  assert.ok(html('sitemap.xml').includes('/zigloo/privacy/'));
  for (const doc of ['privacy', 'terms']) {
   const legal = html(`zigloo/${doc}/index.html`);
-  assert.ok(legal.includes('Effective date: September 8, 2026'));
+  const effectiveDate = 'September 16, 2026';
+  assert.ok(legal.includes(`Effective date: ${effectiveDate}`));
   assert.ok(!/draft|must be finalized|being verified/i.test(legal));
  }
+ const support = html('zigloo/support/index.html');
+ assert.ok(support.includes('Zigloo%20account%20deletion'));
+ assert.ok(support.includes('Delete Zigloo account'));
+ assert.ok(support.includes('Google Play subscriptions'));
+ assert.ok(html('zigloo/terms/index.html').includes('Google Play refund policies'));
+ assert.ok(html('zigloo/terms/index.html').includes('Delete Zigloo account'));
 });
 
 test('shared detail markup and every original component style match the original template', () => {
