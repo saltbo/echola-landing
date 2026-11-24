@@ -30,7 +30,7 @@ test('Product navigation and legal pages stay scoped', () => {
  assert.ok(html('sitemap.xml').includes('/zigloo/privacy/'));
  for (const doc of ['privacy', 'terms']) {
   const legal = html(`zigloo/${doc}/index.html`);
-  const effectiveDate = 'September 16, 2026';
+  const effectiveDate = { privacy: 'November 24, 2026', terms: 'September 16, 2026' }[doc];
   assert.ok(legal.includes(`Effective date: ${effectiveDate}`));
   assert.ok(!/draft|must be finalized|being verified/i.test(legal));
  }
